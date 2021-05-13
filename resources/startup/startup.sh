@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Ultroid - UserBot
+# REE - UserBot
 # Copyright (C) 2020 TeamUltroid
 #
 # This file is a part of < https://github.com/TeamUltroid/Ultroid/ >

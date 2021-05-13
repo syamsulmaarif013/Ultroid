@@ -1,4 +1,4 @@
-# Ultroid - UserBot
+# REE - UserBot
 # Copyright (C) 2020 TeamUltroid
 #
 # This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
@@ -8,7 +8,7 @@
 """
 ✘ Commands Available -
 
-• `{i}afk <optional reason>`
+• `{GUA}afk <optional reason>`
     AFK means away from keyboard,
     After u active this if Someone tag or msg u then It auto Reply Him/her,
     (Note : By Reply To any media U can set media afk too).
@@ -72,15 +72,15 @@ async def set_not_afk(event):
                     file=pic,
                 )
         except BaseException:
-            shite = await ultroid_bot.send_message(
+            shite = await REE_bot.send_message(
                 event.chat_id,
                 get_string("afk_1").format(total_afk_time),
             )
         try:
             try:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(LOG, file=pic)
-                    await ultroid_bot.send_message(
+                    await REE_bot.send_message(LOG, file=pic)
+                    await REE_bot.send_message(
                         LOG,
                         get_string("afk_2").format(total_afk_time),
                     )
@@ -91,7 +91,7 @@ async def set_not_afk(event):
                         file=pic,
                     )
             except BaseException:
-                await ultroid_bot.send_message(
+                await REE_bot.send_message(
                     LOG,
                     get_string("afk_2").format(total_afk_time),
                 )
@@ -184,7 +184,7 @@ async def _(event):
     else:
         pic = None
     if not USER_AFK:
-        last_seen_status = await ultroid_bot(
+        last_seen_status = await REE_bot(
             GetPrivacyRequest(InputPrivacyKeyStatusTimestamp()),
         )
         if isinstance(last_seen_status.rules, PrivacyValueAllowAll):
@@ -193,8 +193,8 @@ async def _(event):
         if reason:
             try:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(event.chat_id, file=pic)
-                    await ultroid_bot.send_message(
+                    await REE_bot.send_message(event.chat_id, file=pic)
+                    await REE_bot.send_message(
                         event.chat_id,
                         get_string("afk_5").format(reason),
                     )
@@ -212,8 +212,8 @@ async def _(event):
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(event.chat_id, file=pic)
-                    await ultroid_bot.send_message(event.chat_id, get_string("afk_6"))
+                    await REE_bot.send_message(event.chat_id, file=pic)
+                    await REE_bot.send_message(event.chat_id, get_string("afk_6"))
                 else:
                     await ultroid_bot.send_message(
                         event.chat_id,
@@ -226,8 +226,8 @@ async def _(event):
         try:
             if reason and pic:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(LOG, file=pic)
-                    await ultroid_bot.send_message(
+                    await REE_bot.send_message(LOG, file=pic)
+                    await REE_bot.send_message(
                         LOG,
                         get_string("afk_7").format(reason),
                     )
@@ -238,15 +238,15 @@ async def _(event):
                         file=pic,
                     )
             elif reason:
-                await ultroid_bot.send_message(LOG, get_string("afk_7").format(reason))
+                await REE_bot.send_message(LOG, get_string("afk_7").format(reason))
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(LOG, file=pic)
-                    await ultroid_bot.send_message(LOG, get_string("afk_8"))
+                    await REE_bot.send_message(LOG, file=pic)
+                    await REE_bot.send_message(LOG, get_string("afk_8"))
                 else:
-                    await ultroid_bot.send_message(LOG, get_string("afk_8"), file=pic)
+                    await REE_bot.send_message(LOG, get_string("afk_8"), file=pic)
             else:
-                await ultroid_bot.send_message(LOG, get_string("afk_8"))
+                await REE_bot.send_message(LOG, get_string("afk_8"))
         except BaseException:
             pass
 

@@ -1,4 +1,4 @@
-# Ultroid - UserBot
+# REE - UserBot
 # Copyright (C) 2020 TeamUltroid
 #
 # This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
@@ -70,10 +70,10 @@ KANGING_STR = [
     "Using Witchery to kang this sticker...",
     "Plagiarising hehe...",
     "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "Hehe me stel ur stiker...",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
+    "Bagus kayanya nih stiker wkwk...",
+    "Bagus juga nehh hehe:v\colong ahh apa ga suka?!..",
+    "Hehe udah dapet...",
+    "Wokwok ambil dsni (🤪｡🤪)!→\colongann...",
     "Roses are red violets are blue, kanging this sticker so my pack looks cool",
     "Imprisoning this sticker...",
     "Mr.Steal-Your-Sticker is stealing this sticker... ",
